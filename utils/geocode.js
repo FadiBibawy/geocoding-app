@@ -8,7 +8,6 @@ const geocode = (address, callback) => {
     .get(url)
     // .get("https://geocode.maps.co/searcadasdasdsosangeles%7D")
     .then((response) => {
-      debugger;
       if (response.data.length === 0) {
         callback("there is no location matching your search", undefined);
       } else {
@@ -31,7 +30,6 @@ const geocode = (address, callback) => {
           undefined
         );
       } else {
-        debugger;
         callback("there is no internet");
       }
       // console.log(error.response.request.res.statusCode);

@@ -2,18 +2,21 @@ const axios = require("axios");
 require("dotenv").config();
 
 const forecast = (long, lat, callback) => {
-  key = process.env.WEATHER_KEY;
+  const key = process.env.WEATHER_KEY;
   // baseUrl = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${address}`;
 
   const baseUrl = "http://api.weatherapi.com/v1/";
   const config = {
     time: "current",
     format: ".json?",
-    key: `key=${key}`,
+    keyU: `key=${key}`,
     address: `&q=${long},${lat}`,
   };
-  const url =
-    baseUrl + config.time + config.format + config.key + config.address;
+
+  const { time, format, keyU, address } = config;
+  // const url =
+  //   baseUrl + config.time + config.format + config.key + config.address;
+  const url = baseUrl + time + format + keyU + address;
 
   axios
     .get(url)
