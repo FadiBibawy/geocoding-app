@@ -1,6 +1,7 @@
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
+const chalk = require("chalk");
 // axios
 //   .get("https://geocode.maps.co/search?q={Egypt}")
 //   // .get("https://geocode.maps.co/searcadasdasdsosangeles%7D")
@@ -33,7 +34,7 @@ const forecast = require("./utils/forecast");
 //   });
 
 if (process.argv.length === 2) {
-  console.log("please provide a location");
+  console.log(chalk.red("please provide a location"));
 } else {
   const data = geocode(process.argv[2], (error, data) => {
     // console.log("error:", error);
