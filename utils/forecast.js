@@ -23,7 +23,7 @@ const forecast = (long, lat, callback) => {
     .then((response) => {
       debugger;
       callback({
-        location: response.data.location.name,
+        location: `${response.data.location.name}, ${response.data.location.region} -  ${response.data.location.country}`,
         temp: response.data.current.temp_c,
         feelslike: response.data.current.feelslike_c,
         condition: response.data.current.condition.text,

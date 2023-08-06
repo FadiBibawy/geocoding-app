@@ -1,0 +1,22 @@
+h1 {
+  color: gray;
+}
+
+.keyboard {
+  width: 20%;
+}
+
+.body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.container {
+  /* padding: 10px; */
+}
