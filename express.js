@@ -31,4 +31,4 @@ app.get("/weather", (req, res) => {
   res.send("<h1>WEATHER Pageeeeeeeeeeeee</h1>");
 });
 
-// app.listen(3005);
+app.listen(3005);
